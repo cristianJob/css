@@ -1,0 +1,37 @@
+/* esto es para comenzar creando los estilos desde mobile*/
+.oferta {
+    background-color: red;
+    padding: 2rem;
+    text-align: center;
+}
+
+.precio {
+    font-size: 4rem;
+    margin: 0;
+}
+
+/* desde los  600px  */
+@media (min-width: 600px) {
+    .oferta {
+        background-color: blue;
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+
+    .precio {
+        font-size: 2rem;
+    }
+}
+
+/* desde los  800px  */
+@media (min-width: 800px) {
+    .oferta {
+        background-color: yellowgreen;
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+
+    .precio {
+        font-size: 6rem;
+    }
+}

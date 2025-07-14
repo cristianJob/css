@@ -1,0 +1,11 @@
+/* Estilos para la primera letra de un párrafo */
+.primer-letra::first-letter {
+    font-size: 2em;
+    color: red;
+}
+
+/* estilos para la primera línea de un párrafo */
+.primer-linea::first-line {
+    font-weight: bold;
+    color: blue;
+}

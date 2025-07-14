@@ -1,0 +1,17 @@
+.texto {
+    background-color: red;
+}
+
+.azul {
+    color: blue;
+    font-size: 22px;
+}
+
+.mayusculas {
+    text-transform: uppercase;
+}
+
+/* busca el elemento que tenga esas 2 clases */
+.texto.mayusculas {
+    font-size: 40px;
+}

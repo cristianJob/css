@@ -1,0 +1,9 @@
+/* Contenedor Responsive se realiza con width: 90%; max-width: 1000px; y tambien puede ser width: min(90%, 1000px); */
+.contenedor-responsive {
+    background-color: aliceblue;
+    width: 90%;
+    max-width: 1000px;
+    /* width: min(90%, 1000px); */
+    height: 400px;
+    margin: 0 auto;
+}

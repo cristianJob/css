@@ -1,0 +1,4 @@
+ul li:first-child { /* selecciona el primer hijo de una lista tambien puede ser first-of-type */
+    color: red;
+    font-weight: bold;
+}

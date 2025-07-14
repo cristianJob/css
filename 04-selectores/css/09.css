@@ -1,0 +1,5 @@
+/*  selecciona el primer <p> inmediatamente después de un <div> (hermano adyacente)  */
+.admin div + p {
+    color: green;
+    font-size: 18px;
+}

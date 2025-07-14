@@ -1,0 +1,5 @@
+/* buscar el primer nivel de hijos, igual a como funciona flexbox o grid */
+.admin > div {
+    color: red;
+    border: 1px solid black;
+}

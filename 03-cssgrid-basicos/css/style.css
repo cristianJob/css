@@ -1,0 +1,211 @@
+:root {
+  --azul: #0071b7;
+  --blanco: #fff;
+  --naranja: #ff4f1e;
+}
+html {
+  font-size: 62.5%; /** 1REM = 10pX **/
+}
+
+body {
+  background-color: var(--azul);
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+}
+
+.caja-curso {
+  background-color: var(--naranja);
+  text-align: center;
+  color: var(--blanco);
+  padding: 5rem;
+}
+.caja-curso h1 {
+  margin: 0;
+}
+.caja-curso p {
+  font-size: 2.4rem;
+}
+.caja-curso a {
+  font-size: 2.4rem;
+  padding: 2rem;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--blanco);
+  padding: 0;
+}
+
+h1,
+h2 {
+  color: var(--blanco);
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.box {
+  background-color: var(--naranja);
+  color: var(--blanco);
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+
+/* 1 */
+.grid-1 {
+  display: grid;
+}
+
+/* 2 */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+}
+
+/* el segundo elemento ira entre la linea 1 y 2 tambien podria ser simplemente grid-column: 1 / 2; */
+.grid-2 .box:nth-child(2) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+/* 3 */
+.grid-3 {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.grid-3 .box:nth-child(2) {
+  grid-row: 1 / 2;
+}
+
+/* 4 */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* el segundo elemento ira entre la linea 2 y 4 y abarcara dos columnas o simplemente escribir grid-column: 2 / 2; */
+.grid-4 .box:nth-child(2) {
+  background-color: blue;
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
+}
+
+/* 5 */
+/* simplifica la construccion de filas y columnas promero va la fila y luego la columna */
+.grid-5 {
+  display: grid;
+  grid: repeat(2, 1fr) / repeat(3, 1fr);
+}
+
+/* 6 */
+.grid-6 {
+  display: grid;
+  grid: repeat(2, 1fr) / repeat(3, 1fr);
+  grid-auto-flow: dense; /* los elementos que no tengan espacio se colocaran en el primer espacio disponible */
+}
+
+.grid-6 .box:nth-child(2) {
+  grid-column: 1 / 2;
+}
+
+/* 7 */
+.grid-7 {
+  display: grid;
+   grid: repeat(2, 1fr) / repeat(3, 1fr);
+}
+
+/* 8 */
+.grid-8 {
+  display: grid;
+  grid: repeat(2, 1fr) / repeat(3, 1fr);
+  gap: 1rem; /* es lo mismo que column-gap y row-gap */
+}
+
+/* 9 */
+.grid-9 {
+  display: grid;
+  height: 120rem;
+  grid-template-areas: "header header header"
+                       "nav nav nav"
+                       "contenido contenido sidebar"
+                       "footer footer footer";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2.5fr 1fr 6fr 1.5fr;
+  gap: 1rem;
+}
+
+.grid-9 .box:nth-child(1) {
+  grid-area: header;
+}
+
+.grid-9 .box:nth-child(2) {
+  grid-area: nav;
+}
+
+.grid-9 .box:nth-child(3) {
+  grid-area: contenido;
+}
+
+.grid-9 .box:nth-child(4) {
+  grid-area: sidebar;
+}
+
+.grid-9 .box:nth-child(5) {
+  grid-area: footer;
+}
+
+/* 10 */
+/* en este caso se usa grid-template en vez de grid-template-areas, es lo mismo pero mas simplificado */
+.grid-10 {
+  display: grid;
+  height: 120rem;
+  grid-template: "header header header" 2.5fr
+                       "nav nav nav"  1fr
+                       "contenido contenido sidebar" 6fr
+                       "footer footer footer" 1.5fr / 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.grid-10 .box:nth-child(1) {
+  grid-area: header;
+}
+
+.grid-10 .box:nth-child(2) {
+  grid-area: nav;
+}
+
+.grid-10 .box:nth-child(3) {
+  grid-area: contenido;
+}
+
+.grid10 .box:nth-child(4) {
+  grid-area: sidebar;
+}
+
+.grid-10 .box:nth-child(5) {
+  grid-area: footer;
+}
+
+/* 11 */
+.grid-11 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 300px;
+  align-items: center;
+}
+
+/* 12 */
+
+.grid-12 {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, 250px); /* agrega mas columnas si queda espacio */
+  grid-template-columns: repeat(auto-fit, 250px); /* agrega mas columnas si hay un nuevo elemento */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* si es menos a 200 lo deja en una fila, funciona para responsivo */
+}

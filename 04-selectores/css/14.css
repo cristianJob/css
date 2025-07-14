@@ -1,0 +1,6 @@
+/* Estilos para los párrafos que no tienen la clase "heading"  y "texto" */
+p:not(.heading):not(.texto) {
+    font-weight: bold;
+    border: 1px solid blue;
+    color: blue;
+}

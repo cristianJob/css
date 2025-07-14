@@ -1,0 +1,365 @@
+html {
+  box-sizing: border-box; /* Esto asegura que el padding se incluya en el ancho total osea nunca pasara el width indicado */
+  font-size: 62.5%; /* 1rem = 10px, 62.5% de 16px = 10px, esto es para que 1rem sea igual a 10px */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 1.6rem;
+  line-height: 2; /* separacion de lineas en texto */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* globales */
+a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: #000;
+}
+
+img {
+  max-width: 100%; /* Hace que las imagenes no se salgan del contenedor */
+  display: block;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+/* Utilidades */
+
+.text-center {
+  text-align: center;
+}
+
+.max-width-30 {
+  max-width: 30rem;
+}
+
+.btn {
+  background-color: #8cbc00;
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.6rem;
+  transition: background-color 0.3s ease-out;
+  text-align: center;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #769c02;
+  cursor: pointer;
+}
+
+/* header y navegacion */
+.nombre-sitio {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.nombre-sitio span {
+  color: #037bc0;
+}
+
+.contenedor-nav {
+  border-top: #e1e1e1 solid 0.1rem;
+}
+
+.nav-principal {
+  padding: 2rem 0;
+  flex-direction: row; /* este es el valor por defecto, si quieren no lo agregas y es para que sea horizontal */
+  display: flex;
+  justify-content: space-between; /* Espacio entre los enlaces */
+}
+
+.hero {
+  background-image: url(../img/principal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 55rem;
+}
+
+.contenedor {
+  max-width: 120rem;
+  margin-inline: auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Categorias */
+.listado-categorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
+  gap: 2rem; /* Espacio entre los elementos */
+}
+
+.categorias h2 {
+  text-align: center;
+}
+
+.categoria a {
+  text-align: center;
+  display: block;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.categoria a:hover {
+  background-color: #037bc0;
+  color: #fff;
+  border-bottom-right-radius: 2rem;
+}
+
+/* Nosotros */
+.sobre-nosotros {
+  background-image: linear-gradient(to right, transparent 50%, #037bc0 50%), url(../img/nosotros.jpg);
+  background-position: left center;
+  padding: 10rem 0;
+  background-repeat: no-repeat;
+  background-size: 100%, 120rem;
+  margin-top: 30px;
+}
+
+.sobre-nosotros-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 8rem;
+}
+
+.texto-nosotros {
+  grid-column: 2/3; /* se pocisiona entre la linea 2 y 3 del grid */
+  color: #fff;
+}
+
+/* Listado de productos */
+
+.contenido-principal {
+  padding-top: 5rem;
+}
+
+.listado-productos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Crea 6 columnas de igual tamaño */
+  gap: 1rem; /* Espacio entre los elementos */
+}
+
+.producto:nth-child(1) {
+  grid-column-start: 1; /* Comienza en la primera linea */
+  grid-column-end: 7; /* Termina en la séptima linea */
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.producto:nth-child(1) img {
+  width: 100%;
+  height: 43rem;
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+.producto:nth-child(2) img,
+.producto:nth-child(3) img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+.producto:nth-child(2) {
+  grid-column-start: 1; /* Comienza en la primera linea */
+  grid-column-end: 4; /* Termina en la cuarta linea */
+}
+
+.producto:nth-child(3) {
+  grid-column-start: 4; /* Comienza en la cuarta linea */
+  grid-column-end: 7; /* Termina en la séptima linea */
+}
+
+.producto:nth-child(4) {
+  grid-column-start: 1; /* Comienza en la primera linea */
+  grid-column-end: 3; /* Termina en la tercera linea */
+}
+
+.producto:nth-child(5) {
+  grid-column-start: 3; /* Comienza en la tercera linea */
+  grid-column-end: 5; /* Termina en la quinta linea */
+}
+
+.producto:nth-child(6) {
+  grid-column-start: 5; /* Comienza en la quinta linea */
+  grid-column-end: 7; /* Termina en la séptima linea */
+}
+
+.producto {
+  background-color: #037bc0;
+}
+
+.texto-producto h3 {
+  margin: 0;
+}
+
+.texto-producto p {
+  margin: 0 0 0.5rem 0;
+}
+
+.texto-producto .precio {
+  font-size: 2.8rem;
+}
+
+.texto-producto {
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+/* Footer */
+.site-footer {
+  border-top: #e1e1e1 solid 0.1rem;
+  margin-top: 5rem;
+}
+
+.site-footer h3 {
+  margin-bottom: .5rem;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
+  gap: 2rem; /* Espacio entre los elementos */
+}
+
+.footer-menu a {
+  display: block;
+}
+
+.copyright {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+/* Estilos para la pagina Nosotros */
+.contenido-nosotros {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /* Crea columnas que se ajustan al tamaño del contenido */
+  column-gap: 4rem;
+}
+
+.informacion-nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Estilos para la pagina Blog */
+
+.contenedor-blog {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 4rem;
+}
+
+.entrada {
+  border-bottom: #e1e1e1 solid 0.1rem;
+  padding-bottom: 4rem;
+}
+
+.entrada:last-of-type {
+  border-bottom: none; /* Elimina el borde del último artículo */
+}
+
+.entrada-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.entrada-meta p {
+  font-weight: 700;
+}
+
+.entrada-meta span {
+  color:#037bc0
+}
+
+/* Estilos para la pagina entrada Blog */
+
+.contenido-entrada-blog {
+  width: 60rem;
+  margin: auto;
+}
+
+/* Estilos para la pagina galeria */
+.galeria {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; /* Espacio entre las imágenes */
+}
+
+.galeria img {
+  height: 40rem;
+  width: 40rem;
+  object-fit: cover;
+}
+
+/* Estilos para la Formularios */
+
+.formulario{
+   max-width: 60rem;
+   margin: auto;
+}
+
+.formulario fieldset {
+  border-color: #000;
+  border-width: 1px;
+}
+
+.formulario legend {
+   background-color: #037bc0;
+   width: 100%;
+   color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+.campo {
+ display: flex;
+ margin-bottom: 2rem;
+}
+
+.campo label {
+  flex-basis: 10rem; /* Ancho del label */
+
+}
+
+.campo input:not([type="radio"]), .campo textarea, .campo select{
+  flex: 1;
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
+
+}
+
+.btn-formulario {
+  margin-top: 2rem;
+}

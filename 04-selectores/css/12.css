@@ -1,0 +1,5 @@
+ul li:last-child { /* selecciona el último hijo de una lista, tambien se puede ocupar last-of-type */
+    font-weight: bold;
+    border: 1px solid black;
+    color : red;
+}

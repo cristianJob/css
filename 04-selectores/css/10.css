@@ -1,0 +1,25 @@
+/* Estilos para enlaces con selectores de atributo */
+
+/* seleccionar todos los enlaces que comienzan con http */
+a[href^="http"] {
+    color: blue;
+    font-size: 22px;
+    text-decoration: none;
+
+}
+
+/* seleccionar todos los enlaces que terminan con .com */
+a[href$=".com"] {
+    color: blue;
+    font-size: 22px;
+    text-decoration: none;
+
+}
+
+a[href="http://www.google.com"] {
+    color: blue;
+    font-size: 22px;
+    text-decoration: none;
+
+}
+

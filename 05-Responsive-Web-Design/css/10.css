@@ -1,0 +1,7 @@
+/*  permite que las imágenes sean responsivas, no permite que cresca mas de lo que puede para no desfigurarse y se agrega y
+   display: block; para que las imágenes se comporten como elementos de bloque y ocupen todo el ancho disponible
+*/
+img {
+    max-width: 100%;
+    display: block;
+}

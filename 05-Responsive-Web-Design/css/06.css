@@ -1,0 +1,12 @@
+/* tamaños estandar mobile, tablet y web, el orden es porque es mobile first y ocupa min-width, en web seria al reves y ocupa max-width */
+@media (min-width: 550px){
+
+}
+
+@media (min-width: 768px){
+
+}
+
+@media (min-width: 1024px){
+
+}
